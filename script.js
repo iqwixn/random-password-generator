@@ -5,7 +5,8 @@ var upperChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialChars = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "`", "~", "-", "_", "=", "+", "[", "]", "{", "}", "|", ";", ":", "'", ",", "<", ".", ">", "/", "?"];
 var length;
-var chosenCharacters; 
+var chosenCharacters = ""; 
+var randomPassword = "";
 
 
 // Write password to the #password input
@@ -41,17 +42,22 @@ function generatePassword() {
   };
   if (!lowerChars && !upperChars && !numbers && !specialChars == true){
     window.alert("Please select at least one type of character to choose.")
-  
+  writePassword();
+  }
+  if (lowerChars && !upperChars && !numbers && !specialChars == true){
+   
 
-  } else if (lowerChars && !upperChars && !numbers && !specialChars == true){
-    return genLowercase();
+      password = lowerChars[Math.floor(Math.random() * lowerChars.length)];
+      
+    
+    }
+
+
   }
 
-}
 
 
-
-
+/*
 function genLowercase() {
   return lowerChars[Math.floor(Math.random() * lowerChars.length)];
 
@@ -70,6 +76,6 @@ function genNumber() {
 function generateSpecial() {
     return specialChars[Math.floor(Math.random() * specialChars.length)];
 };
-
+*/
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
