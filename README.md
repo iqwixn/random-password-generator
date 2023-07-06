@@ -29,4 +29,4 @@ https://iqwixn.github.io/random-password-generator/
 
 ## Website screenshot
 
-![Screenshot of Portfolio website](assets/images/portfolio-website-screenshot.png)
+![Screenshot of Portfolio website](assets/random-password-generator-screenshot.png)
